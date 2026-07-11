@@ -1,10 +1,25 @@
-ㅣㄴ ㄴㅇㄹ<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>King Yong | 인사노무 담당자</title>
 <script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          naver: {
+            light: '#eafaf0',
+            DEFAULT: '#03C75A',
+            dark: '#02a94d',
+          },
+        },
+      },
+    },
+  };
+</script>
 <style>
   html { scroll-behavior: smooth; }
   .fade-in {
@@ -18,38 +33,43 @@
   }
 </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased">
+<body class="bg-gradient-to-b from-naver-light to-white text-slate-800 antialiased">
 
   <!-- Nav -->
-  <header class="fixed top-0 inset-x-0 z-50 bg-slate-50/80 backdrop-blur border-b border-slate-200">
+  <header class="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur border-b border-naver/20">
     <nav class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
       <span class="font-semibold tracking-tight text-slate-900">King Yong</span>
-      <div class="flex gap-6 text-sm font-medium text-slate-600">
-        <a href="#about" class="hover:text-indigo-600 transition-colors">소개</a>
-        <a href="#skills" class="hover:text-indigo-600 transition-colors">기술 스택</a>
-        <a href="#contact" class="hover:text-indigo-600 transition-colors">연락처</a>
+      <div class="flex gap-5 text-sm font-medium text-slate-600">
+        <a href="#about" class="hover:text-naver transition-colors">소개</a>
+        <a href="#career" class="hover:text-naver transition-colors">경력</a>
+        <a href="#skills" class="hover:text-naver transition-colors">기술 스택</a>
+        <a href="#projects" class="hover:text-naver transition-colors">프로젝트</a>
+        <a href="#contact" class="hover:text-naver transition-colors">연락처</a>
       </div>
     </nav>
   </header>
 
   <!-- Hero -->
-  <section class="min-h-screen flex items-center justify-center px-6 bg-gradient-to-br from-indigo-50 via-slate-50 to-slate-100">
+  <section class="min-h-screen flex items-center justify-center px-6 bg-gradient-to-br from-naver/10 via-white to-naver-light">
     <div class="max-w-3xl text-center">
-      <p class="fade-in text-indigo-600 font-semibold tracking-wide uppercase text-sm mb-4">HR &amp; AI Project</p>
+      <p class="fade-in text-naver font-semibold tracking-wide uppercase text-sm mb-4">HR &amp; AI Project</p>
       <h1 class="fade-in text-5xl sm:text-6xl font-bold text-slate-900 tracking-tight mb-4">King Yong</h1>
       <p class="fade-in text-lg sm:text-xl text-slate-600 mb-10">
         인사노무 담당자 · 조직 내 AI프로젝트를 통한 제도 기획 및 운영
       </p>
-      <a href="#about" class="fade-in inline-block px-6 py-3 rounded-full bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition-colors shadow-sm">
+      <a href="#about" class="fade-in inline-block px-6 py-3 rounded-full bg-naver text-white font-medium hover:bg-naver-dark transition-colors shadow-sm">
         더 알아보기
       </a>
     </div>
   </section>
 
   <!-- About -->
-  <section id="about" class="py-24 px-6">
+  <section id="about" class="py-24 px-6 bg-white">
     <div class="max-w-3xl mx-auto">
-      <h2 class="fade-in text-sm font-semibold uppercase tracking-wide text-indigo-600 mb-3">소개</h2>
+      <div class="fade-in inline-flex items-center gap-2 mb-4">
+        <span class="flex items-center justify-center w-6 h-6 rounded-full bg-naver text-white text-xs font-bold">01</span>
+        <span class="text-sm font-semibold uppercase tracking-wide text-naver">소개</span>
+      </div>
       <p class="fade-in text-2xl sm:text-3xl font-semibold text-slate-900 leading-snug mb-6">
         노동법과 데이터를 함께 다루는 인사노무 담당자입니다.
       </p>
@@ -58,22 +78,78 @@
         조직 내 AI 프로젝트를 통해 인사 업무의 효율을 높이는 일을 하고 있습니다.
         실무와 기술을 연결해 더 나은 제도와 프로세스를 만드는 것을 목표로 합니다.
       </p>
+
+      <div class="fade-in grid grid-cols-3 gap-4 mt-10">
+        <div class="text-center p-4 rounded-2xl bg-naver-light">
+          <p class="text-2xl font-bold text-naver">5+</p>
+          <p class="text-xs text-slate-500 mt-1">년 인사노무 경력</p>
+        </div>
+        <div class="text-center p-4 rounded-2xl bg-naver-light">
+          <p class="text-2xl font-bold text-naver">3</p>
+          <p class="text-xs text-slate-500 mt-1">건 AI 프로젝트 주도</p>
+        </div>
+        <div class="text-center p-4 rounded-2xl bg-naver-light">
+          <p class="text-2xl font-bold text-naver">2</p>
+          <p class="text-xs text-slate-500 mt-1">개 사내 규정 전면 개정</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Career -->
+  <section id="career" class="py-24 px-6 bg-naver-light border-y border-naver/20">
+    <div class="max-w-3xl mx-auto">
+      <div class="fade-in inline-flex items-center gap-2 mb-4">
+        <span class="flex items-center justify-center w-6 h-6 rounded-full bg-naver text-white text-xs font-bold">02</span>
+        <span class="text-sm font-semibold uppercase tracking-wide text-naver">경력</span>
+      </div>
+      <p class="fade-in text-2xl sm:text-3xl font-semibold text-slate-900 mb-10">걸어온 길</p>
+
+      <ol class="relative border-l-2 border-naver/30 space-y-10 pl-8">
+        <li class="fade-in relative">
+          <span class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-naver ring-4 ring-naver-light"></span>
+          <p class="text-sm font-medium text-naver mb-1">2022.03 ~ 현재</p>
+          <p class="text-lg font-semibold text-slate-900">㈜그린텍 인사노무팀 대리</p>
+          <p class="text-slate-600 mt-2 leading-relaxed">
+            취업규칙 개정 및 노사협의회 운영을 담당하며, 사내 AI 챗봇 기반 노무상담 시스템 도입을 주도했습니다.
+          </p>
+        </li>
+        <li class="fade-in relative">
+          <span class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-naver ring-4 ring-naver-light"></span>
+          <p class="text-sm font-medium text-naver mb-1">2020.01 ~ 2022.02</p>
+          <p class="text-lg font-semibold text-slate-900">㈜한빛물류 인사팀 사원</p>
+          <p class="text-slate-600 mt-2 leading-relaxed">
+            근로계약 관리, 4대보험 및 급여 실무를 담당하고, 채용 프로세스 개선으로 서류 처리 시간을 단축했습니다.
+          </p>
+        </li>
+        <li class="fade-in relative">
+          <span class="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-naver ring-4 ring-naver-light"></span>
+          <p class="text-sm font-medium text-naver mb-1">2019.02</p>
+          <p class="text-lg font-semibold text-slate-900">OO대학교 경영학과 졸업</p>
+          <p class="text-slate-600 mt-2 leading-relaxed">
+            인사조직론을 전공하며 노동법과 조직행동에 대한 기초를 다졌습니다.
+          </p>
+        </li>
+      </ol>
     </div>
   </section>
 
   <!-- Skills -->
-  <section id="skills" class="py-24 px-6 bg-white border-y border-slate-200">
+  <section id="skills" class="py-24 px-6 bg-white">
     <div class="max-w-3xl mx-auto">
-      <h2 class="fade-in text-sm font-semibold uppercase tracking-wide text-indigo-600 mb-3">기술 스택</h2>
+      <div class="fade-in inline-flex items-center gap-2 mb-4">
+        <span class="flex items-center justify-center w-6 h-6 rounded-full bg-naver text-white text-xs font-bold">03</span>
+        <span class="text-sm font-semibold uppercase tracking-wide text-naver">기술 스택</span>
+      </div>
       <p class="fade-in text-2xl sm:text-3xl font-semibold text-slate-900 mb-10">역량 &amp; 관심 분야</p>
 
       <div class="fade-in mb-8">
         <h3 class="text-sm font-semibold text-slate-500 mb-3">노동법 &amp; 인사제도</h3>
         <div class="flex flex-wrap gap-2">
-          <span class="px-4 py-2 rounded-full bg-indigo-50 text-indigo-700 text-sm font-medium">노동법</span>
-          <span class="px-4 py-2 rounded-full bg-indigo-50 text-indigo-700 text-sm font-medium">근로기준법</span>
-          <span class="px-4 py-2 rounded-full bg-indigo-50 text-indigo-700 text-sm font-medium">인사제도 기획</span>
-          <span class="px-4 py-2 rounded-full bg-indigo-50 text-indigo-700 text-sm font-medium">노무관리</span>
+          <span class="px-4 py-2 rounded-full bg-naver-light text-naver-dark text-sm font-medium">노동법</span>
+          <span class="px-4 py-2 rounded-full bg-naver-light text-naver-dark text-sm font-medium">근로기준법</span>
+          <span class="px-4 py-2 rounded-full bg-naver-light text-naver-dark text-sm font-medium">인사제도 기획</span>
+          <span class="px-4 py-2 rounded-full bg-naver-light text-naver-dark text-sm font-medium">노무관리</span>
         </div>
       </div>
 
@@ -89,24 +165,71 @@
     </div>
   </section>
 
+  <!-- Projects -->
+  <section id="projects" class="py-24 px-6 bg-naver-light border-y border-naver/20">
+    <div class="max-w-3xl mx-auto">
+      <div class="fade-in inline-flex items-center gap-2 mb-4">
+        <span class="flex items-center justify-center w-6 h-6 rounded-full bg-naver text-white text-xs font-bold">04</span>
+        <span class="text-sm font-semibold uppercase tracking-wide text-naver">프로젝트</span>
+      </div>
+      <p class="fade-in text-2xl sm:text-3xl font-semibold text-slate-900 mb-10">진행한 프로젝트 사례</p>
+
+      <div class="grid gap-6 sm:grid-cols-3">
+        <div class="fade-in bg-white rounded-2xl p-6 shadow-sm border border-naver/10">
+          <p class="text-lg font-semibold text-slate-900 mb-2">사내 노무 상담 챗봇 도입</p>
+          <p class="text-sm text-slate-600 leading-relaxed mb-4">
+            ChatGPT 기반 FAQ 챗봇으로 반복 문의 응답을 자동화해 상담 처리 시간을 40% 단축했습니다.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full bg-naver-light text-naver-dark text-xs font-medium">ChatGPT</span>
+            <span class="px-3 py-1 rounded-full bg-naver-light text-naver-dark text-xs font-medium">프로세스 설계</span>
+          </div>
+        </div>
+        <div class="fade-in bg-white rounded-2xl p-6 shadow-sm border border-naver/10">
+          <p class="text-lg font-semibold text-slate-900 mb-2">근태 데이터 이상탐지 자동화</p>
+          <p class="text-sm text-slate-600 leading-relaxed mb-4">
+            스프레드시트 데이터를 기반으로 이상 근태 패턴을 자동 탐지하는 룰 기반 시스템을 기획했습니다.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full bg-naver-light text-naver-dark text-xs font-medium">데이터 분석</span>
+            <span class="px-3 py-1 rounded-full bg-naver-light text-naver-dark text-xs font-medium">업무 자동화</span>
+          </div>
+        </div>
+        <div class="fade-in bg-white rounded-2xl p-6 shadow-sm border border-naver/10">
+          <p class="text-lg font-semibold text-slate-900 mb-2">취업규칙 전면 개정</p>
+          <p class="text-sm text-slate-600 leading-relaxed mb-4">
+            개정 노동법을 반영해 사내 규정을 전면 개정하고, 법무팀 및 경영진과 협의를 주도했습니다.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full bg-naver-light text-naver-dark text-xs font-medium">노동법</span>
+            <span class="px-3 py-1 rounded-full bg-naver-light text-naver-dark text-xs font-medium">이해관계자 조율</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact -->
-  <section id="contact" class="py-24 px-6">
+  <section id="contact" class="py-24 px-6 bg-white">
     <div class="max-w-3xl mx-auto text-center">
-      <h2 class="fade-in text-sm font-semibold uppercase tracking-wide text-indigo-600 mb-3">연락처</h2>
+      <div class="fade-in inline-flex items-center gap-2 mb-4">
+        <span class="flex items-center justify-center w-6 h-6 rounded-full bg-naver text-white text-xs font-bold">05</span>
+        <span class="text-sm font-semibold uppercase tracking-wide text-naver">연락처</span>
+      </div>
       <p class="fade-in text-2xl sm:text-3xl font-semibold text-slate-900 mb-8">
         편하게 연락 주세요
       </p>
       <div class="fade-in inline-flex items-center gap-3">
         <a
           href="mailto:won01288@gmail.com"
-          class="px-6 py-3 rounded-full bg-slate-900 text-white font-medium hover:bg-slate-700 transition-colors shadow-sm"
+          class="px-6 py-3 rounded-full bg-naver text-white font-medium hover:bg-naver-dark transition-colors shadow-sm"
         >
           won01288@gmail.com
         </a>
         <button
           id="copy-btn"
           type="button"
-          class="px-4 py-3 rounded-full border border-slate-300 text-slate-600 text-sm font-medium hover:bg-slate-100 transition-colors"
+          class="px-4 py-3 rounded-full border border-naver/40 text-naver-dark text-sm font-medium hover:bg-naver-light transition-colors"
         >
           복사
         </button>
@@ -114,7 +237,7 @@
     </div>
   </section>
 
-  <footer class="py-8 px-6 text-center text-sm text-slate-400 border-t border-slate-200">
+  <footer class="py-8 px-6 text-center text-sm text-slate-400 border-t border-naver/20">
     &copy; 2026 King Yong. All rights reserved.
   </footer>
 
